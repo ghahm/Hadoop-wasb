@@ -26,7 +26,7 @@
    * hadoop fs -cat wasb://[Container Name]@[Storage Account Name].blob.core.windows.net/[Test File Name] | grep [Test Word] > [Target File Name] | hadoop fs -put -f [Target File Name] wasb://[Container Name]@[Storage Account Name].blob.core.windows.net/[Target File Name]
 
 ### 주의사항 <br>
-(1) - Azure Blob Storage의 컨테이너 내에 특정 디렉토리 밑에 파일을 저장해야 할 경우, 해당 디텍토리가 없으면 에러가 발생
+(1) Azure Blob Storage의 컨테이너 내에 특정 디렉토리 밑에 파일을 저장해야 할 경우, 해당 디텍토리가 없으면 에러가 발생
 1. hadoop fs -put -f xxx.json wasb://~~와 같이 Azure Blob Storage의 컨테이너 내에 특정 디렉토리 밑에 파일을 저장해야 할 경우, 해당 디텍토리가 없으면 에러가 발생
 2. 이런 경우 hadoop fs -mkdir wasb://[Container Name]@[Storage Account Name].blob.core.windows.net/[리텍토리명]와 같이 mkdir을 실행한 후 put을 실행할 것
 
